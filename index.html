@@ -1,0 +1,389 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toko Fashion</title>
+  <meta name="description" content="Toko fashion temanmu - tema pink. Produk, ulasan customer, kontak." />
+  <style>
+    :root{
+      --pink: #ff6fa3;
+      --pink-dark: #e35b8a;
+      --bg: #fff8fb;
+      --card-bg: #ffffff;
+      --muted: #7a7a7a;
+      --maxw: 1200px;
+    }
+    .logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none; 
+  box-shadow: none;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+h1 {
+  font-size: 36px; 
+  font-weight: bold; 
+}
+
+.logo-text { 
+  font-size: 24px; 
+  font-weight: bold; 
+}
+    *{box-sizing:border-box}
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background: linear-gradient(180deg,var(--bg), #fff); color:#222}
+    a{color:var(--pink-dark); text-decoration:none}
+    header{background:linear-gradient(90deg,var(--pink) 0%, #ffd6ea 100%); padding:28px 20px;}
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 18px}
+    .nav{display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:70px; height:70px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:700; color:white; background:var(--pink-dark); box-shadow:0 6px 18px rgba(227,91,138,0.15)}
+    nav ul{display:flex; gap:14px; list-style:none; margin:0; padding:0}
+    
+.hero{display:flex; gap:24px; align-items:center; padding:34px 0}
+.hero-left{flex:1}
+.hero h1{margin:0 0 12px; font-size:34px; color:#3a2140}
+.hero p{margin:0 0 18px; color:var(--muted)}
+.cta{display:inline-block; background:var(--pink); color:white; padding:12px 18px; border-radius:10px; font-weight:600}
+.hero-right{flex:1; display:flex; justify-content:center}
+.hero-image{width:250px; height:250px; border-radius:16px; overflow:hidden; background:linear-gradient(180deg,#ffdfe9,#fff); display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+.hero-image img{width:100%; height:100%; object-fit:cover}
+
+/* Produk grid */
+section.products{padding:30px 0}
+.products h2{margin:0 0 18px; text-align:center; color:#4a2a3a}
+.grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:20px}
+.card{background:var(--card-bg); border-radius:12px; padding:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.05); display:flex; flex-direction:column}
+.card .imgwrap{width:100%; height:200px; border-radius:10px; overflow:hidden}
+.card img{width:100%; height:100%; object-fit:cover; display:block}
+.card h3{margin:10px 0 6px; font-size:18px}
+.price{color:var(--pink-dark); font-weight:700}
+.card .desc{color:var(--muted); font-size:14px; flex:1}
+.card .btn{display:inline-block; margin-top:12px; background:var(--pink); color:white; padding:8px 12px; border-radius:8px}
+
+/* Reviews */
+section.reviews{padding:30px 0; background:linear-gradient(180deg, rgba(255,230,245,0.6), transparent);}
+.reviews h2{text-align:center; margin:0 0 18px}
+.review-grid{display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:18px}
+.review{background:white; padding:14px; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+.rating{color: #ffb86b; font-weight:700}
+.review p{margin:8px 0 0; color:var(--muted)}
+
+/* Contact */
+section.contact{padding:30px 0}
+.contact-grid{display:grid; 
+  grid-template-columns:1fr 360px; 
+  gap:24px;
+  text-align: left;
+}
+.contact-card{background:white; padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+form label{display:block; font-size:14px; margin-bottom:6px}
+input, textarea{width:100%; padding:10px 12px; border-radius:8px; border:1px solid #eee; margin-bottom:12px}
+button[type=submit]{background:var(--pink-dark); color:white; padding:10px 14px; border-radius:10px; border:none}
+.contact-info{font-size:14px; color:var(--muted)}
+.main-footer {
+    background-color: #ff6fa3; 
+    color: #fff; 
+    padding: 60px 40px; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    font-family: Arial, sans-serif; 
+}
+
+.footer-column {
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+    text-align: left;
+    color: #eee;
+}
+
+.footer-column a {
+    color: #fcfdff; 
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.footer-column a:hover {
+    color: #ffffff; 
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Efek saat di-hover */
+}
+
+.footer-bottom {
+    flex-basis: 100%; 
+    border-top: 1px solid #fef6fa;
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-bottom img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Responsive */
+@media (max-width:900px){
+  .hero{flex-direction:column}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">
+          <img src="https://w7.pngwing.com/pngs/948/40/png-transparent-gold-letter-l-letters-abc-alphabet-l-miscellaneous-english-photography-thumbnail.png" alt="logo">
+        </div>
+        <div>
+          <div class="logo-text">Toko Fashion</div>
+          <div class="logo-sub">Pink Collection</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#ulasan">Ulasan</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container hero">
+      <div class="hero-left">
+        <h1>Temukan gayamu✨</h1>
+        <p>Koleksi fashion cantik dengan tas, makeup, pakaian, dan aksesori. Kualitas oke, desain unik.</p>
+        <a class="cta" href="#produk">Lihat Produk</a>
+      </div>
+      <div class="hero-right">
+        <div class="hero-image">
+          <img src="https://i.pinimg.com/736x/2c/04/93/2c049356822fab1fc288f6abf359eb33.jpg" alt="hero">
+        </div>
+      </div>
+    </div>
+  </header> 
+  <main class="container">
+    <section id="produk" class="products">
+      <h2>Produk Unggulan</h2>
+      <div class="grid" id="productGrid">
+        <article class="card">
+          <div class="imgwrap"><img src="https://i.pinimg.com/1200x/a2/15/70/a215703d5c5faebac796061affd22a52.jpg" alt="Tas Cantik"></div>
+          <h3>Tas Cantik</h3>
+          <div class="desc">Tas ransel motif bunga, bahan kanvas, cocok untuk sehari-hari.</div>
+          <div style="margin-top:8px"><span class="price">Rp92.000</span> 
+            <a class="btn" href="https://id.shp.ee/FiFzBfG">Beli</a>
+          </div>
+        </article>
+        <article class="card">
+      <div class="imgwrap"><img src="https://i.pinimg.com/736x/47/9d/84/479d84857a42d7a98be6aca72df7454a.jpg" alt="Lip Serum"></div>
+      <h3>Lip Serum</h3>
+      <div class="desc">Lip serum melembapkan dengan aroma lembut.</div>
+      <div style="margin-top:8px"><span class="price">Rp97.000</span> 
+        <a class="btn" href="https://id.shp.ee/bonNVzq">Beli</a></div>
+    </article>
+     <article class="card">
+      <div class="imgwrap"><img src="https://i.pinimg.com/736x/e2/97/21/e29721cb30241851b236e3b43d88a56f.jpg" alt="Parfum"></div>
+      <h3>Parfum Scarlett</h3>
+      <div class="desc">Parfum local brand wangi segar, kemasan estetik.</div>
+      <div style="margin-top:8px"><span class="price">Rp60.000</span> 
+        <a class="btn" href="https://id.shp.ee/XTTziTa">Beli</a></div>
+    </article>
+     <article class="card">
+      <div class="imgwrap"><img src="https://i.pinimg.com/1200x/72/b5/73/72b57339b18ace0e2e5a5672c12310b0.jpg" alt="Kemeja wispie"></div>
+      <h3>Kemeja Wispie</h3>
+      <div class="desc">Kemeja whispie stripe fitted.</div>
+      <div style="margin-top:8px"><span class="price">Rp57.000</span> 
+        <a class="btn" href="https://id.shp.ee/V5FxXYr">Beli</a></div>
+    </article>
+    <article class="card">
+      <div class="imgwrap"><img src="https://i.pinimg.com/736x/0f/2a/aa/0f2aaa25780d6be8468ff89ca9b4bb8b.jpg" alt="Puma Speedcat White Pink"></div>
+      <h3>Puma Speedcat White Pink</h3>
+      <div class="desc">Puma Speedcat White Pink.</div>
+      <div style="margin-top:8px"><span class="price">Rp2.577.599</span> 
+        <a class="btn" href="https://id.shp.ee/LfVaGtN">Beli</a></div>
+    </article>
+    <article class="card">
+      <div class="imgwrap"><img src="https://i.pinimg.com/1200x/f0/27/08/f02708a86d6507092bdc79bb3802c21b.jpg" alt="Stanley Tumbler"></div>
+      <h3>Stanley Tumbler</h3>
+      <div class="desc">Stanley Tumbler The Quencher H2.0 Flowstate.</div>
+      <div style="margin-top:8px"><span class="price">Rp676.200</span> 
+        <a class="btn" href="https://id.shp.ee/sV6CPuR">Beli</a></div>
+    </article>
+    <article class="card">
+      <div class="imgwrap"><img src="https://i.pinimg.com/1200x/80/1f/22/801f227882ff1a3df5c883f81f00f87d.jpg" alt="Backpack Nike Brasilia"></div>
+      <h3>Backpack Nike Brasilia</h3>
+      <div class="desc">Stanley Backpack Nike Brasilia.</div>
+      <div style="margin-top:8px"><span class="price">Rp314.100</span> 
+        <a class="btn" href="https://id.shp.ee/6pe4Sca">Beli</a></div>
+    </article>
+    <article class="card">
+      <div class="imgwrap"><img src="https://i.pinimg.com/1200x/a2/16/50/a2165014001c53cc2d434df13f204827.jpg" alt="Puma Speedcat Ballet Black Pink"></div>
+      <h3>Puma Speedcat Ballet Black Pink</h3>
+      <div class="desc">Puma Speedcat Ballet Black Pink.</div>
+      <div style="margin-top:8px"><span class="price">Rp2.449.040</span> 
+        <a class="btn" href="https://id.shp.ee/UzafwgY">Beli</a></div>
+    </article>
+  </div>
+</section>
+<section id="ulasan" class="reviews">
+  <h2>Ulasan Pelanggan</h2>
+  <div class="review-grid">
+    <div class="review">
+      <div style="display:flex;align-items:center;gap:10px"><strong>Alyssa</strong><div class="rating">★★★★☆</div></div>
+      <p>Tasnya lucu banget dan kuat. Pengiriman cepat, recommended!</p>
+    </div>
+    <div class="review">
+      <div style="display:flex;align-items:center;gap:10px"><strong>Dina</strong><div class="rating">★★★★★</div></div>
+      <p>Wangi parfumnya tahan lama dan kemasannya cantik. Puas belanja di sini.</p>
+    </div>
+    <div class="review">
+      <div style="display:flex;align-items:center;gap:10px"><strong>Rizka</strong><div class="rating">★★★★☆</div></div>
+      <p>Produknya sesuai gambar, hanya ukuran yang sedikit kebesaran tapi overall oke.</p>
+    </div>
+  </div>
+</section>
+</main>  
+  <footer class="main-footer">
+    <div class="footer-column">
+        <h3>Kontak & Bantuan</h3>
+        <ul>
+            <li><a href="#">Chat Dengan CS</a></li>
+            <li><a href="tel:+6282005682126">+62 882005682126</a></li>
+            <li><a href="mailto:twinklaelaa22@gmail.com">twinklaelaa22@gmail.com</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Kategori Produk</h3>
+        <ul>
+            <li><a href="#">Pakaian Wanita</a></li>
+            <li><a href="#">Pakaian Pria</a></li>
+            <li><a href="#">Aksesori</a></li>
+            <li><a href="#">Sepatu</a></li>
+            <li><a href="#">Koleksi Terbaru</a></li>
+            <li><a href="#">Diskon & Promo</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h3>Tentang Kami</h3>
+        <ul>
+            <li><a href="#">Tentang Toko</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Lokasi Toko</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h3>Bantuan & Informasi</h3>
+        <ul>
+            <li><a href="#">Panduan Ukuran</a></li>
+            <li><a href="#">Lacak Pesanan</a></li>
+            <li><a href="#">FAQ (Pertanyaan Umum)</a></li>
+            <li><a href="#">Kebijakan Pengembalian</a></li>
+            <li><a href="#">Blog Fashion</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-social">
+        <a href="#" class="social-icon">
+            <img src="https://static.vecteezy.com/system/resources/previews/018/930/748/original/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png.png" alt="WhatsApp">
+        </a>
+        <a href="#" class="social-icon">
+            <img src="https://static.vecteezy.com/system/resources/previews/018/930/413/original/instagram-logo-instagram-icon-transparent-free-png.png" alt="Instagram">
+        </a>
+        <a href="#" class="social-icon">
+            <img src="https://static.vecteezy.com/system/resources/previews/021/492/188/original/tiktok-logo-free-download-free-png.png" alt="TikTok">
+        </a>
+        <a href="#" class="social-icon">
+            <img src="https://www.freeiconspng.com/uploads/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube">
+        </a>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 Toko Fashion. by_laela.</p>
+        <p>
+            <img src="https://static.vecteezy.com/system/resources/previews/028/766/365/large_2x/dana-payment-icon-symbol-free-png.png" alt="Dana">
+            <img src="https://cdn-images-1.medium.com/max/1200/1*Dw4-tOJ_9myFUywLd3qzjA.png" alt="Paypal">
+            <img src="https://info.dipendajatim.go.id/landing/img/GoPay.png" alt="GoPay">
+        </p>
+    </div>
+</footer>
+  </body>
+</html>
